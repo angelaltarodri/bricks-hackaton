@@ -1,0 +1,105 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .foto {
+      background-position: center center;
+      background-size: cover;
+
+      width: 200px;
+      height: 200px;
+
+      border-radius: 50%;
+      border: 5px solid #f48266;
+    }
+    .nombre {
+      font-size: 22px;
+      font-weight: 500;
+      mat-icon {
+        color: rgb(0, 132, 255);
+      }
+    }
+  }
+
+  .animate {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(90deg, #f48266 0%, rgb(234, 80, 24) 100%);
+    border-radius: 10px;
+
+    padding: 20px;
+    width: 90%;
+
+    .titulo {
+      font-weight: 500;
+      font-size: 17px;
+      text-align: center;
+    }
+    .content {
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .precio {
+      margin-top: 20px;
+      border-radius: 15px;
+      height: 30px;
+      width: fit-content;
+      font-size: 14px;
+      padding: 0 20px;
+      background-color: white;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .tabla {
+    margin-top: 20px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    .header {
+      font-weight: 500;
+    }
+    .fila,
+    .header {
+      display: flex;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px dashed rgb(217, 217, 217);
+
+      > div {
+        padding-left: 20px;
+
+        display: flex;
+        align-items: center;
+      }
+      .beneficios {
+        width: 45%;
+      }
+      .gratis {
+        width: 30%;
+      }
+      .premium {
+        width: 25%;
+      }
+      .infinite {
+        font-size: 20px;
+      }
+      .premium,
+      .infinite {
+        color: #f48266;
+      }
+    }
+  }
+}

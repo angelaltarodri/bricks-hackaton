@@ -1,0 +1,305 @@
+.foto_principal {
+  background-position: center center;
+  background-size: cover;
+  min-height: 500px;
+  width: 100%;
+
+  position: relative;
+  .shadow-data {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.806) 0%,
+      rgba(0, 0, 0, 0) 60%
+    );
+
+    display: flex;
+    justify-content: start;
+    align-items: end;
+
+    .titles {
+      color: white;
+      min-height: 200px;
+      width: 100%;
+
+      padding: 0 25px;
+
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-weight: 500;
+      > div {
+        padding-left: 20px;
+      }
+      .lugar {
+        font-size: 25px;
+      }
+
+      .lugar,
+      .precio,
+      .estadia {
+        display: flex;
+        align-items: center;
+        mat-icon {
+          margin-right: 10px;
+          width: 30px;
+        }
+      }
+      .disponibilidad {
+        margin-left: 10px;
+
+        background-color: #f48266;
+        color: black;
+
+        height: 30px;
+        width: fit-content;
+        border-radius: 8px;
+
+        display: flex;
+        align-items: center;
+
+        padding: 10px 20px;
+      }
+    }
+  }
+}
+.acerca_de {
+  background-color: white;
+  min-height: 100px;
+  padding: 20px 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  .titulo {
+    color: gray;
+    font-size: 14px;
+    padding: 0px 40px;
+  }
+  .url_referencia {
+    text-decoration: none;
+    margin: 0px 40px;
+
+    color: white;
+    background: black;
+    height: 30px;
+    width: fit-content;
+    padding: 0 20px;
+
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    &:hover {
+      background-color: black;
+    }
+  }
+  .descripcion {
+    padding: 0px 40px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    .condicion {
+      display: flex;
+      align-items: center;
+
+      gap: 10px;
+    }
+    .interes {
+      display: flex;
+      flex-direction: column;
+
+      gap: 10px;
+
+      .actividad {
+        display: flex;
+        flex-direction: column;
+        .accion {
+          background-color: tomato;
+          color: white;
+
+          height: 30px;
+          width: fit-content;
+          border-radius: 8px;
+
+          display: flex;
+          align-items: center;
+
+          padding: 10px 20px;
+
+          mat-icon {
+            font-size: 20px;
+          }
+        }
+        .contenido {
+          margin-top: 5px;
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          .item {
+            display: flex;
+            align-items: start;
+
+            mat-icon {
+              font-size: 20px;
+              width: 8%;
+            }
+            .texto {
+              width: 80%;
+            }
+            .plus {
+              color: white;
+              background-color: black;
+              height: 30px;
+              width: 12%;
+              border-radius: 8px;
+
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+          }
+        }
+      }
+    }
+  }
+  .botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    min-height: 150px;
+
+    .boton {
+      height: 70px;
+      width: 70px;
+      border-radius: 50%;
+      background-color: #f48266;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      mat-icon {
+        font-size: 35px;
+        width: 35px;
+        height: 35px;
+      }
+    }
+  }
+}
+.mini_perfil {
+  background-color: tomato;
+
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .general {
+    height: 160px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .texto {
+      padding: 0px 40px;
+      width: 65%;
+
+      .titulo {
+        color: black;
+        font-size: 14px;
+      }
+      .nombre {
+        font-size: 22px;
+      }
+      .descripcion {
+        font-size: 14px;
+      }
+    }
+    .foto_perfil {
+      right: 0px;
+
+      width: 35%;
+      height: 80%;
+
+      border-radius: 10px;
+      margin-right: 10px;
+
+      background-position: center center;
+      background-size: cover;
+    }
+  }
+  .details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    min-height: 90px;
+
+    .texto {
+      padding: 0px 40px;
+      width: 100%;
+
+      .titulo {
+        color: black;
+        font-size: 14px;
+        margin-bottom: 10px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .gustos {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        .gusto {
+          background: white;
+          color: black;
+
+          height: 30px;
+          width: fit-content;
+          border-radius: 8px;
+
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          padding: 10px 20px;
+
+          font-size: 15px;
+
+          mat-icon {
+            font-size: 20px;
+          }
+
+          .icon_gusto {
+            width: 15px;
+            height: 15px;
+            color: black;
+
+            background-position: center center;
+            background-size: cover;
+          }
+        }
+      }
+    }
+  }
+}
+.foto_complementaria {
+  height: 300px;
+
+  background-position: center center;
+  background-size: cover;
+}

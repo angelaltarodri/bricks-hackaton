@@ -1,0 +1,62 @@
+.aprobar-dialog {
+  text-align: center;
+  padding: 30px 20px;
+
+  background-color: white;
+  color: black;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .aprobar-icon {
+    text-align: center;
+    mat-icon {
+      font-size: 40px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+  .aprobar-title {
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 17px;
+  }
+  .aprobar-description {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: 300;
+    width: 90%;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    .aprobar-button-cancel {
+      margin-top: 20px;
+      background: transparent;
+      border-radius: 20px;
+      width: 107px;
+      height: 38px;
+      color: #f48266;
+      border: 1px solid #f48266;
+      &:active {
+        background: transparent;
+      }
+    }
+    .aprobar-button {
+      margin-top: 20px;
+      background: #f48266;
+      border-radius: 20px;
+      width: 109px;
+      height: 40px;
+      color: white;
+      border: none;
+      &:active {
+        background: #f48266;
+      }
+    }
+  }
+}

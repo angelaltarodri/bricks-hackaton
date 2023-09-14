@@ -1,0 +1,300 @@
+{
+  "personas": [
+    {
+      "id": 1,
+      "usuario": "Angel",
+      "edad": 23,
+      "fotos": [
+        "https://pbs.twimg.com/media/F5lh4HyXsAAxcbh?format=jpg&name=large",
+        "https://s.t13.cl/sites/default/files/styles/manualcrop_850x475/public/t13/field-imagen/2022-06/1655317620-tomhiddleston.jpg.jpeg?itok=VI_rYFIg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Tom_Hiddleston%2C_Loki_%284-c%29.jpg/1863px-Tom_Hiddleston%2C_Loki_%284-c%29.jpg"
+      ],
+      "biografia": "Me gusta comer platos típicos a cada lugar que voy.",
+      "telefono": "+51 944237085",
+      "_idIntereses": [1, 2, 3],
+      "basico": {
+        "ocupacion": ["Abogado", "Actor"],
+        "genero": "Masculino",
+        "ciudad_natal": "Lima, Perú"
+      },
+      "adicionales": {
+        "altura": 1.88,
+        "actividad_fisica": "A Menudo",
+        "nivel_educativo": "Formación profesional",
+        "bebida": "Solo en compañia.",
+        "tabaco": "Nunca",
+        "signo_zodiacal": "Tauro",
+        "politica": "Sin interés en la política",
+        "religion": "Agnosticismo"
+      },
+      "idiomas": ["Inglés", "Español"],
+
+      "instagram": "https://www.instagram.com/angelaltarodri/"
+    },
+    {
+      "id": 2,
+      "usuario": "Maria",
+      "edad": 30,
+      "fotos": [
+        "https://ca-times.brightspotcdn.com/dims4/default/a9c8095/2147483647/strip/true/crop/5760x3840+0+0/resize/1200x800!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fa8%2F8b%2F237503aa42fab16f6f2db6aa0037%2Fla-photos-1staff-488776-et-0205-rhea-seehorn-03-gem.jpg",
+        "https://deadline.com/wp-content/uploads/2023/05/Rhea-Seehorn.jpg?w=1024",
+        "https://www.eluniverso.com/resizer/KBmApRyC79uic-N-s_XiehmA1ww=/912x670/smart/filters:quality(70)/cloudfront-us-east-1.images.arcpublishing.com/eluniverso/OWOLIL5QTZC7XMFQKOUVNP6TSI.jpg"
+      ],
+      "biografia": "Tengo mil juegos de mesa para compartir.",
+      "telefono": "+51 944237085",
+      "_idIntereses": [1, 2, 3],
+      "basico": {
+        "ocupacion": ["Economía", "Actuación"],
+        "genero": "Femenino",
+        "ciudad_natal": "Lima, Perú"
+      },
+      "adicionales": {
+        "altura": 1.68,
+        "actividad_fisica": "A Menudo",
+        "nivel_educativo": "Formación profesional",
+        "bebida": "Solo en compañia.",
+        "tabaco": "Solo en compañia",
+        "signo_zodiacal": "Escorpio",
+        "politica": "De derecha",
+        "religion": "Catolicismo"
+      },
+      "idiomas": ["Inglés", "Español"],
+
+      "instagram": "https://www.instagram.com/rheaseehorn/"
+    },
+    {
+      "id": 3,
+      "usuario": "José",
+      "edad": 30,
+      "fotos": [
+        "https://tecolotito.elsiglodetorreon.com.mx/i/2023/04/1674993.jpeg"
+      ],
+      "biografia": "Me gusta catar todo tipo de vinos y otras cosas.",
+      "telefono": "+51 944237085",
+      "_idIntereses": [1, 2, 3],
+      "basico": {
+        "ocupacion": ["Ingeniería", "Músico"],
+        "genero": "Masculino",
+        "ciudad_natal": "Lima, Perú"
+      },
+      "adicionales": {
+        "altura": 1.78,
+        "actividad_fisica": "A Menudo",
+        "nivel_educativo": "Formación profesional",
+        "bebida": "A menudo.",
+        "tabaco": "Solo en compañia",
+        "signo_zodiacal": "Acuario",
+        "politica": "De derecha",
+        "religion": "Agnosticismo"
+      },
+      "idiomas": ["Inglés", "Español"],
+
+      "instagram": "https://www.instagram.com/pesopluma/"
+    }
+  ],
+  "intereses": [
+    {
+      "id": 1,
+      "icon": "https://freepngimg.com/download/chat/158472-photos-bubble-chat-icon-free-transparent-image-hd.png",
+      "titulo": "idiomas"
+    },
+    {
+      "id": 2,
+      "icon": "https://static.thenounproject.com/png/2038327-200.png",
+      "titulo": "diseño"
+    },
+    {
+      "id": 3,
+      "icon": "https://cdn-icons-png.flaticon.com/512/857/857492.png",
+      "titulo": "deportes"
+    }
+  ],
+  "publicaciones": [
+    {
+      "id": 1,
+      "id_iniciativa": 2,
+      "id_alojamiento": 1,
+      "tipo": "Alquiler de viaje",
+      "pais": "Argentina",
+      "precio_total": 10080,
+      "moneda": "PEN",
+      "numero_personas": 12,
+      "descripcion": "Hola! Somos 6 amigos que buscamos compañia adicional para poder ahorrar algunos costos y de paso conocer más personas interesadas en conocer Buenos Aires.",
+      "fecha_inicio": "Sat Oct 14 2023 04:15:59 GMT-0500 (Peru Standard Time)",
+      "fecha_fin": "Sun Oct 29 2023 04:15:59 GMT-0500 (Peru Standard Time)",
+      "fecha_cierre": "Tue Oct 03 2023 00:00:00 GMT-0500 (Peru Standard Time)",
+      "intereses": [
+        {
+          "tipo": "VISITAR",
+          "descripcion": "Planetario Galileo Galilei",
+          "idInteresados": [1, 2, 3]
+        },
+        {
+          "tipo": "VISITAR",
+          "descripcion": "Estatua de Mafalda",
+          "idInteresados": [1, 2, 3]
+        },
+        {
+          "tipo": "VISITAR",
+          "descripcion": "Obelisco de Buenos Aires",
+          "idInteresados": [1, 2, 3]
+        },
+        {
+          "tipo": "VISITAR",
+          "descripcion": "Museo de Arte Latinoamericano",
+          "idInteresados": [1, 2, 3]
+        },
+        {
+          "tipo": "COMER",
+          "descripcion": "Probar asado argentino y alfajores",
+          "idInteresados": [1, 2, 3]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "id_iniciativa": 3,
+      "id_alojamiento": 3,
+      "tipo": "Alquiler de viaje",
+      "pais": "México",
+      "precio_total": 5910,
+      "moneda": "PEN",
+      "numero_personas": 10,
+      "descripcion": "Hola! Somos 4 amigos que buscamos compañia adicional para poder ahorrar algunos costos y de paso conocer más personas interesadas en conocer Buenos Aires.",
+      "fecha_inicio": "Fri Oct 13 2023 04:15:59 GMT-0500 (Peru Standard Time)",
+      "fecha_fin": "Fri Oct 20 2023 04:15:59 GMT-0500 (Peru Standard Time)",
+      "fecha_cierre": "Tue Oct 03 2023 00:00:00 GMT-0500 (Peru Standard Time)",
+      "intereses": [
+        {
+          "tipo": "VISITAR",
+          "descripcion": "Chichén Itzá ",
+          "idInteresados": [1, 2, 3]
+        },
+        {
+          "tipo": "VISITAR",
+          "descripcion": "Tulum",
+          "idInteresados": [1, 2, 3]
+        },
+        {
+          "tipo": "VISITAR",
+          "descripcion": "Museo Frida Kahlo",
+          "idInteresados": [1, 2, 3]
+        },
+        {
+          "tipo": "COMER",
+          "descripcion": "Tacos variados",
+          "idInteresados": [1, 2, 3]
+        },
+        {
+          "tipo": "COMER",
+          "descripcion": "Totopos",
+          "idInteresados": [1, 2, 3]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "id_iniciativa": 3,
+      "id_alojamiento": 2,
+      "tipo": "Alquiler de viaje",
+      "pais": "Perú",
+      "precio_total": 4750,
+      "moneda": "PEN",
+      "numero_personas": 10,
+      "descripcion": "Hola! Somos 5 amigos que buscamos compañia adicional para poder ahorrar algunos costos y de paso conocer más personas interesadas en conocer Cusco.",
+      "fecha_inicio": "Thu Oct 05 2023 04:15:59 GMT-0500 (Peru Standard Time)",
+      "fecha_fin": "Sun Oct 22 2023 04:15:59 GMT-0500 (Peru Standard Time)",
+      "fecha_cierre": "Tue Oct 03 2023 00:00:00 GMT-0500 (Peru Standard Time)",
+      "intereses": [
+        {
+          "tipo": "VISITAR",
+          "descripcion": "Macchu Picchu",
+          "idInteresados": [1, 2, 3]
+        },
+        {
+          "tipo": "VISITAR",
+          "descripcion": "Sacsayhuamán",
+          "idInteresados": [1, 2, 3]
+        },
+        {
+          "tipo": "VISITAR",
+          "descripcion": "Montaña de los 7 colores",
+          "idInteresados": [1, 2, 3]
+        },
+        {
+          "tipo": "COMER",
+          "descripcion": "Tamal cusqueño",
+          "idInteresados": [1, 2, 3]
+        },
+        {
+          "tipo": "COMER",
+          "descripcion": "Cuy chactado",
+          "idInteresados": [1, 2, 3]
+        }
+      ]
+    }
+  ],
+  "empresas": [
+    {
+      "id": 1,
+      "nombre_empresa": "Jonathan Kremer",
+      "anfitrion": "Jonathan Kremer",
+      "coanfitriones": [],
+      "descripcion": "",
+      "idiomas": ["English", "Español", "עברית"]
+    }
+  ],
+  "alojamientos": [
+    {
+      "id": 1,
+      "id_creador": 1,
+      "pais": "Argentina",
+      "ciudad": "Buenos Aires",
+      "direccion": "Balvanera",
+      "camas": 15,
+      "habitaciones": 3,
+      "banios": 3,
+      "capacidad": "16 a más",
+      "descripcion": "",
+      "URL_referencia": "https://www.airbnb.com.pe/rooms/31160859?adults=12&check_in=2023-11-14&check_out=2023-11-29&source_impression_id=p3_1693904654_Xu9d9emVUVNiB%2BW6&previous_page_section_name=1000&federated_search_id=dfa57113-f0d9-45e6-9814-aa03a0878eab&guests=12",
+      "fotos": [
+        "https://a0.muscache.com/im/pictures/baa353b8-503e-4acb-afd7-a8ba721c2f7d.jpg?im_w=1200",
+        "https://a0.muscache.com/im/pictures/6a3cb378-ac28-45a7-8517-4c0184f1ee0c.jpg?im_w=1200"
+      ]
+    },
+    {
+      "id": 2,
+      "id_creador": 1,
+      "pais": "Perú",
+      "ciudad": "Cusco",
+      "direccion": "Cusco",
+      "camas": 9,
+      "habitaciones": 5,
+      "banios": 3,
+      "capacidad": "11 huéspedes",
+      "descripcion": "",
+      "URL_referencia": "https://www.airbnb.com.pe/rooms/943051054019536505?adults=10&check_in=2023-10-05&source_impression_id=p3_1694189105_wtPXxruKpp39R7pr&previous_page_section_name=1000&federated_search_id=acd69cd4-1335-4c8e-a7a7-7aaec412827a&guests=1&check_out=2023-10-22",
+      "fotos": [
+        "https://a0.muscache.com/im/pictures/ebb0066b-de69-4088-a5f4-de3a1be40dbe.jpg?im_w=1200",
+        "https://a0.muscache.com/im/pictures/09d7d7b5-095f-46c0-955e-b96f72165d8a.jpg?im_w=1200"
+      ]
+    },
+    {
+      "id": 3,
+      "id_creador": 1,
+      "pais": "México",
+      "ciudad": "Cancún",
+      "direccion": "Quintana Roo",
+      "camas": 10,
+      "habitaciones": 5,
+      "banios": 5,
+      "capacidad": "Más de 16 huéspedes",
+      "descripcion": "",
+      "URL_referencia": "https://www.airbnb.com.pe/rooms/958095601624747144?adults=10&enable_m3_private_room=true&check_in=2023-10-13&source_impression_id=p3_1694189877_BOzqo7UIwThgq5Q0&previous_page_section_name=1000&federated_search_id=278bfc45-2904-44c0-b528-cbf4ccf781cf&guests=1&check_out=2023-10-20",
+      "fotos": [
+        "https://a0.muscache.com/im/pictures/9eb4ef7f-5db2-4ca2-9684-058c7b5d5e38.jpg?im_w=1200",
+        "https://a0.muscache.com/im/pictures/9504f71a-c8b3-4a3a-ac17-a3ae63d0ec45.jpg?im_w=1440"
+      ]
+    }
+  ]
+}

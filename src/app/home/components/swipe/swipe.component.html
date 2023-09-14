@@ -1,0 +1,188 @@
+<div
+  class=""
+  [@cardAnimator]="animationState"
+  (@cardAnimator.done)="resetAnimationState($event)"
+  (swipeleft)="startAnimation('swipeleft')"
+  (swiperight)="startAnimation('swiperight')"
+>
+  <div
+    class="foto_principal"
+    [ngStyle]="{
+      'background-image': 'url(' + alojamientoMostrado.fotos[0] + ')'
+    }"
+  >
+    <div class="shadow-data">
+      <div class="titles">
+        <div class="lugar">
+          {{ alojamientoMostrado.ciudad + ", " + alojamientoMostrado.pais }}
+        </div>
+        <div class="precio">
+          <mat-icon> local_atm</mat-icon>
+          {{
+            publicacionMostrada.precio_total /
+              publicacionMostrada.numero_personas
+          }}.00 {{ publicacionMostrada.moneda }} p.p.
+        </div>
+        <div class="estadia">
+          <mat-icon>date_range</mat-icon>
+          {{ getFechaFormateada(publicacionMostrada.fecha_inicio) }} -
+          {{ getFechaFormateada(publicacionMostrada.fecha_fin) }}
+        </div>
+        <div class="estadia">
+          <!-- <mat-icon> calendar_today</mat-icon> -->
+          <mat-icon>add_alert</mat-icon>
+          CIERRA LISTA EL 23/07/2023
+        </div>
+        <div class="disponibilidad">
+          8 / {{ publicacionMostrada.numero_personas }} personas inscritas
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="acerca_de">
+    <div class="titulo">Acerca de...</div>
+    <div class="descripcion">
+      {{ publicacionMostrada.descripcion }}
+    </div>
+    <a class="url_referencia" [href]="alojamientoMostrado.URL_referencia">
+      <mat-icon>link</mat-icon> Ver referencia
+    </a>
+  </div>
+  <div class="mini_perfil">
+    <div class="general">
+      <div class="texto">
+        <div class="titulo">Iniciativa de...</div>
+        <div class="nombre">{{ personaMostrada.usuario }}</div>
+        <div class="descripcion">
+          {{ personaMostrada.biografia }}
+        </div>
+      </div>
+      <div
+        class="foto_perfil"
+        [ngStyle]="{
+          'background-image': 'url(' + personaMostrada.fotos[0] + ')'
+        }"
+      ></div>
+    </div>
+    <div class="details">
+      <div class="texto">
+        <div class="titulo">Gustos...</div>
+        <div class="gustos">
+          <div class="gusto">
+            <div
+              class="icon_gusto"
+              style="
+                background-image: url('https://static.thenounproject.com/png/2038327-200.png');
+              "
+            ></div>
+            Diseño
+          </div>
+          <div class="gusto">
+            <div
+              class="icon_gusto"
+              style="
+                background-image: url('https://cdn-icons-png.flaticon.com/512/857/857492.png');
+              "
+            ></div>
+            Deportes
+          </div>
+          <div class="gusto">
+            <div
+              class="icon_gusto"
+              style="
+                background-image: url('https://freepngimg.com/download/chat/158472-photos-bubble-chat-icon-free-transparent-image-hd.png');
+              "
+            ></div>
+            Idiomas
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="details">
+      <div class="texto">
+        <div class="titulo">
+          Ocupación
+          <div>
+            <div class="gustos">
+              <div class="gusto">
+                <mat-icon>work</mat-icon>
+                Derecho
+              </div>
+              <div class="gusto">
+                <mat-icon>tag_faces</mat-icon>
+                Actuación
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="acerca_de">
+    <div class="titulo">Intereses</div>
+    <div class="descripcion">
+      <div class="interes">
+        <div class="actividad">
+          <div class="accion">
+            <mat-icon> directions_walk</mat-icon> VISITAR
+          </div>
+          <div class="contenido">
+            <div
+              class="item"
+              *ngFor="let interes of interesesForCard['VISITAR']; let i = index"
+            >
+              <mat-icon>check</mat-icon>
+              <div class="texto">{{ interes.descripcion }}</div>
+              <div class="plus">+{{ interes.idInteresados.length }}</div>
+            </div>
+          </div>
+        </div>
+        <div class="actividad">
+          <div class="accion"><mat-icon> fastfood</mat-icon> COMER</div>
+          <div class="contenido">
+            <div
+              class="item"
+              *ngFor="let interes of interesesForCard['COMER']; let i = index"
+            >
+              <mat-icon>check</mat-icon>
+              <div class="texto">{{ interes.descripcion }}</div>
+              <div class="plus">+{{ interes.idInteresados.length }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="foto_complementaria"
+    [ngStyle]="{
+      'background-image': 'url(' + alojamientoMostrado.fotos[1] + ')'
+    }"
+  ></div>
+  <div class="acerca_de">
+    <!-- <div class="titulo">Condiciones negociables</div>
+    <div class="descripcion">
+      <div class="condicion">
+        <mat-icon>flag</mat-icon>
+        Fumar MJ.
+      </div>
+      <div class="condicion">
+        <mat-icon>flag</mat-icon>
+        Hablar de política.
+      </div>
+      <div class="condicion">
+        <mat-icon>flag</mat-icon>
+        Salir a discotecas.
+      </div>
+    </div> -->
+    <div class="botones">
+      <div class="boton dislike" (click)="cardAnimation('swipeleft')">
+        <mat-icon>close</mat-icon>
+      </div>
+      <div class="boton mas_tarde"><mat-icon>watch_later</mat-icon></div>
+      <div class="boton like" (click)="mostrarInteresDialog()">
+        <mat-icon>check</mat-icon>
+      </div>
+    </div>
+  </div>
+</div>

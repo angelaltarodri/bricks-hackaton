@@ -1,0 +1,151 @@
+<div class="sidebar">
+  <div class="sidenav" [ngClass]="{ 'sidenav-show': mostrarSidenav }">
+    <div class="logo-derrama">
+      <div class="">Construye</div>
+    </div>
+    <div class="sidenav-section" (click)="toggleMenu()">
+      <div class="sidenav-section_container">
+        <div class="img-sidenav">
+          <mat-icon>card_travel</mat-icon>
+        </div>
+        Alquiler compartido
+      </div>
+    </div>
+    <div class="sidenav-section" (click)="toggleMenu()">
+      <div class="sidenav-section_container">
+        <div class="img-sidenav">
+          <mat-icon>casino</mat-icon>
+        </div>
+        Juegos en grupo
+      </div>
+    </div>
+    <div class="sidenav-section" (click)="toggleMenu()">
+      <div class="sidenav-section_container">
+        <div class="img-sidenav">
+          <mat-icon>airport_shuttle</mat-icon>
+        </div>
+        Voluntariado
+      </div>
+    </div>
+    <div class="sidenav-section" (click)="toggleMenu()">
+      <div class="sidenav-section_container">
+        <div class="img-sidenav">
+          <mat-icon>center_focus_strong</mat-icon>
+        </div>
+        Focus Group
+      </div>
+    </div>
+  </div>
+  <div
+    class="sidenav-background"
+    (click)="toggleMenu()"
+    [ngClass]="{ 'sidenav-background-block': mostrarSidenav }"
+  ></div>
+  <div class="content">
+    <div class="content-header">
+      <div class="content-title">
+        <mat-icon class="menu-icon" (click)="toggleMenu()">menu</mat-icon>
+      </div>
+      <div class="content-user" mat-button [matMenuTriggerFor]="beforeMenu">
+        <mat-icon>more_vert</mat-icon>
+      </div>
+      <mat-menu #beforeMenu="matMenu" xPosition="before">
+        <button mat-menu-item>Editar perfil</button>
+        <button mat-menu-item (click)="logout()">Cerrar sesión</button>
+      </mat-menu>
+    </div>
+    <div class="content-body">
+      <div
+        class="body-border"
+        *ngIf="menuForm.get('pestaña')!.value === 'swipe'"
+      >
+        <app-swipe></app-swipe>
+      </div>
+      <div
+        class="body-border"
+        *ngIf="menuForm.get('pestaña')!.value === 'person'"
+      >
+        <app-profile></app-profile>
+      </div>
+      <div
+        class="body-border"
+        *ngIf="menuForm.get('pestaña')!.value === 'elegidos'"
+      >
+        <app-likes></app-likes>
+      </div>
+      <div
+        class="body-border"
+        *ngIf="menuForm.get('pestaña')!.value === 'buscar'"
+      >
+        <app-buscar></app-buscar>
+      </div>
+    </div>
+    <form
+      class="footer"
+      autocomplete="off"
+      [formGroup]="menuForm"
+      (ngSubmit)="submitMenuForm()"
+    >
+      <div class="footer-icon">
+        <input
+          type="radio"
+          formControlName="pestaña"
+          value="person"
+          id="person"
+          style="display: none"
+        />
+        <label for="person">
+          <mat-icon>person</mat-icon>
+        </label>
+      </div>
+      <div class="footer-icon">
+        <input
+          type="radio"
+          formControlName="pestaña"
+          value="elegidos"
+          id="elegidos"
+          style="display: none"
+        />
+        <label for="elegidos">
+          <mat-icon>favorite</mat-icon>
+        </label>
+      </div>
+      <div class="footer-icon">
+        <input
+          type="radio"
+          formControlName="pestaña"
+          value="swipe"
+          style="display: none"
+          id="swipe"
+        />
+        <label for="swipe">
+          <img src="assets/log.png" alt="" />
+        </label>
+      </div>
+      <div class="footer-icon">
+        <input
+          type="radio"
+          formControlName="pestaña"
+          [value]="'buscar'"
+          id="buscar"
+          style="display: none"
+        />
+        <label for="buscar">
+          <mat-icon>search</mat-icon>
+        </label>
+      </div>
+      <div class="footer-icon">
+        <input
+          type="radio"
+          formControlName="pestaña"
+          value="crear"
+          id="crear"
+          style="display: none"
+        />
+        <label for="crear">
+          <mat-icon>star</mat-icon>
+        </label>
+      </div>
+    </form>
+  </div>
+</div>

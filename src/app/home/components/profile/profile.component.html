@@ -1,0 +1,52 @@
+<div class="profile">
+  <div class="principal">
+    <div
+      class="foto"
+      [ngStyle]="{
+        'background-image': 'url(' + personaMostrada.fotos[0] + ')'
+      }"
+    ></div>
+    <div class="nombre">
+      {{ personaMostrada.usuario }}, {{ personaMostrada.edad }}
+      <mat-icon>verified_user</mat-icon>
+    </div>
+  </div>
+
+  <div class="animate">
+    <div class="titulo">¡Anímate!</div>
+
+    <div class="content">
+      Desbloquea todas nuestras funciones y toma el control de tu experiencia.
+    </div>
+
+    <div class="precio">Ver precio</div>
+  </div>
+
+  <div class="tabla">
+    <div class="header">
+      <div class="beneficios">Beneficios</div>
+      <div class="gratis">Gratuito</div>
+      <div class="premium">Premium</div>
+    </div>
+    <div class="fila">
+      <div class="beneficios">Número de salas a crear por mes</div>
+      <div class="gratis">1</div>
+      <div class="premium infinite">∞</div>
+    </div>
+    <div class="fila">
+      <div class="beneficios">Poder unirse a salas por mes</div>
+      <div class="gratis">4</div>
+      <div class="premium infinite">∞</div>
+    </div>
+    <div class="fila">
+      <div class="beneficios">Ver info de integrantes de sala</div>
+      <div class="gratis">Solo creador</div>
+      <div class="premium">Todos</div>
+    </div>
+    <div class="fila">
+      <div class="beneficios">Acceso a paquetes especiales de agencias</div>
+      <div class="gratis"><mat-icon>close</mat-icon></div>
+      <div class="premium"><mat-icon>check</mat-icon></div>
+    </div>
+  </div>
+</div>

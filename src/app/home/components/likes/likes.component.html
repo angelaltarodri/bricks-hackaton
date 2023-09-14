@@ -1,0 +1,198 @@
+<div class="elegidos" *ngIf="item === 0">
+  <div class="titulo">Elegidos</div>
+  <div class="subtitulo">Has elegido conectar con...</div>
+  <div class="cuadro">
+    <div class="fav" *ngFor="let elem of data; let i = index">
+      <div
+        class="foto_principal"
+        [ngStyle]="{
+          'background-image': 'url(' + elem.alojamiento.fotos[0] + ')'
+        }"
+      ></div>
+      <div class="contenido">
+        <div class="ciudad_pais">
+          {{ elem.alojamiento.ciudad + ", " + elem.alojamiento.pais }}
+        </div>
+        <div class="fechas">
+          {{ "Desde el " + getFechaFormateada(elem.publicacion.fecha_inicio) }}
+          <br />
+          {{ " hasta " + getFechaFormateada(elem.publicacion.fecha_fin) }}
+        </div>
+
+        <div class="disponibilidad">
+          {{ 24 + "/" + elem.publicacion.numero_personas }}
+        </div>
+
+        <div class="info" (click)="setItem(1)">
+          <mat-icon>info</mat-icon>
+        </div>
+      </div>
+    </div>
+    <div class="fav_admitido">
+      <div
+        class="foto_principal"
+        [ngStyle]="{
+          'background-image': 'url(' + data[0].alojamiento.fotos[0] + ')'
+        }"
+      ></div>
+      <div class="contenido">
+        <div class="ciudad_pais">
+          {{ data[0].alojamiento.ciudad + ", " + data[0].alojamiento.pais }}
+        </div>
+        <div class="fechas">
+          {{
+            "Desde el " + getFechaFormateada(data[0].publicacion.fecha_inicio)
+          }}
+          <br />
+          {{ " hasta " + getFechaFormateada(data[0].publicacion.fecha_fin) }}
+        </div>
+
+        <div class="disponibilidad">
+          {{ 5 + "/" + data[0].publicacion.numero_personas }}
+        </div>
+
+        <div class="info" (click)="setItem(2)">
+          <mat-icon>info</mat-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="elegidos" *ngIf="item === 1">
+  <div class="titulo">
+    {{ data[0].alojamiento.ciudad + ", " + data[0].alojamiento.pais }}
+  </div>
+  <div class="alojamiento">
+    <div
+      class="foto"
+      [ngStyle]="{
+        'background-image': 'url(' + data[0].alojamiento.fotos[0] + ')'
+      }"
+    ></div>
+    <div
+      class="foto"
+      [ngStyle]="{
+        'background-image': 'url(' + data[0].alojamiento.fotos[1] + ')'
+      }"
+    ></div>
+  </div>
+  <div class="subtitulo">Persona encargada</div>
+  <div class="iniciativa">
+    <div
+      class="foto"
+      [ngStyle]="{
+        'background-image': 'url(' + data[0].persona.fotos[0] + ')'
+      }"
+    ></div>
+    <div class="info_persona">
+      <div class="info" (click)="setItem(1)">
+        <mat-icon>info</mat-icon>
+      </div>
+      <div class="titulo">
+        Soy
+        {{ data[0].persona.usuario }}
+      </div>
+      <div class="descripcion">
+        {{ data[0].persona.biografia }}
+      </div>
+    </div>
+  </div>
+
+  <div class="integrantes">
+    <div class="titulo">Participantes por revisar</div>
+    <div class="grupo">
+      <div class="integrante">Enrique, 22 años.</div>
+      <div class="integrante">Carlos, 21 años.</div>
+      <div class="integrante">Maria Fé, 23 años.</div>
+      <div class="integrante">Carolina, 20 años.</div>
+      <div class="integrante">Giovani, 19 años.</div>
+      <div class="integrante">Diego, 21 años.</div>
+      <div class="integrante">Lady, 22 años.</div>
+    </div>
+  </div>
+  <div class="admitidos">
+    <div class="titulo">Admitidos</div>
+    <div class="grupo">
+      <div class="integrante">Luz, 22 años.</div>
+      <div class="integrante">Marcos, 21 años.</div>
+      <div class="integrante">Martha, 23 años.</div>
+    </div>
+  </div>
+</div>
+
+<div class="elegidos" *ngIf="item === 2">
+  <div class="titulo">
+    {{ data[0].alojamiento.ciudad + ", " + data[0].alojamiento.pais }}
+  </div>
+  <div class="alojamiento">
+    <div
+      class="foto"
+      [ngStyle]="{
+        'background-image': 'url(' + data[0].alojamiento.fotos[0] + ')'
+      }"
+    ></div>
+    <div
+      class="foto"
+      [ngStyle]="{
+        'background-image': 'url(' + data[0].alojamiento.fotos[1] + ')'
+      }"
+    ></div>
+  </div>
+  <div class="subtitulo">Persona encargada</div>
+  <div class="iniciativa">
+    <div
+      class="foto"
+      [ngStyle]="{
+        'background-image': 'url(' + data[0].persona.fotos[0] + ')'
+      }"
+    ></div>
+    <div class="info_persona">
+      <div class="info" (click)="setItem(1)">
+        <mat-icon>info</mat-icon>
+      </div>
+      <div class="titulo">
+        Soy
+        {{ data[0].persona.usuario }}
+      </div>
+      <div class="descripcion">
+        {{ data[0].persona.biografia }}
+      </div>
+    </div>
+  </div>
+
+  <div class="integrantes">
+    <div class="titulo">Participantes por revisar</div>
+    <div class="grupo">
+      <div class="integrante">Enrique, 22 años.</div>
+      <div class="integrante">Carlos, 21 años.</div>
+      <div class="integrante">Maria Fé, 23 años.</div>
+      <div class="integrante">Carolina, 20 años.</div>
+      <div class="integrante">Giovani, 19 años.</div>
+      <div class="integrante">Diego, 21 años.</div>
+      <div class="integrante">Lady, 22 años.</div>
+    </div>
+  </div>
+  <div class="admitidos">
+    <div class="titulo">Admitidos</div>
+  </div>
+  <div class="iniciativa">
+    <div
+      class="foto"
+      [ngStyle]="{
+        'background-image': 'url(' + data[1].persona.fotos[0] + ')'
+      }"
+    ></div>
+    <div class="info_persona">
+      <div class="info" (click)="setItem(1)">
+        <mat-icon>info</mat-icon>
+      </div>
+      <div class="titulo">
+        Soy
+        {{ data[1].persona.usuario }}
+      </div>
+      <div class="descripcion">
+        {{ data[1].persona.biografia }}
+      </div>
+    </div>
+  </div>
+</div>

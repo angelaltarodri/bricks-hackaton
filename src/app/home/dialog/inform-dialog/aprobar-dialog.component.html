@@ -1,0 +1,40 @@
+<form
+  class="aprobar-dialog"
+  autocomplete="off"
+  [formGroup]="aceptoForm"
+  (ngSubmit)="isAccepted()"
+>
+  <div class="aprobar-icon">
+    <mat-icon>check_circle_outline</mat-icon>
+  </div>
+  <div class="aprobar-title" *ngIf="data.title !== ''">{{ data.title }}</div>
+  <div class="aprobar-description">
+    ¡En este momento estás a punto de confirmar tu interés por participar en
+    este evento! Eso sí, todavía no has sido seleccionado como partícipe oficial
+    hasta que el administrador lo apruebe personalmente.
+  </div>
+  <!-- <div class="aprobar-title">Para proceder...</div> -->
+  <!-- <div class="aprobar-condiciones">
+    Por favor indique los campos en los cuales esta de acuerdo marcando un
+    check:
+
+    <div class="aprobar-listado">
+      <mat-checkbox color="Accent"> Fumar MJ.</mat-checkbox>
+      <mat-checkbox color="Accent">Hablar de política.</mat-checkbox>
+      <mat-checkbox color="Accent"> Salir a discotecas.</mat-checkbox>
+    </div>
+  </div> -->
+  <div mat-dialog-actions class="buttons">
+    <button
+      type="button"
+      mat-button
+      (click)="onNoClick()"
+      class="aprobar-button-cancel"
+    >
+      Cancelar
+    </button>
+    <button type="submit" mat-button cdkFocusInitial class="aprobar-button">
+      Conectar
+    </button>
+  </div>
+</form>
